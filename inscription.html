@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Inscription - UPC</title>
+        <link rel="stylesheet" href="insc.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Formulaire d'inscription</h1>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="inscription.html">Inscription</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+        <main>
+            <form action="php/submit_inscription.php" method="post" enctype="multipart/form-data">
+                <label>Nom complet :
+                    <input type="text" name="nom" required>
+                </label><br>
+
+                <label>Email :
+                    <input type="email" name="email" required>
+                </label><br>
+
+                <label>Télephone :
+                    <input type="tel" name="Telephone" required>
+                </label><br>
+
+                <label>Choisissez une Faculté :
+                    <select name="faculte" required>
+                        <option value="Informatique">Sciences informatiques</option>
+                        <option value="Economie">Economie</option>
+                        <option value="Droit">Droit</option>
+                        <option value="Medecine">Médecine</option>
+                        <option value="Theologie">Théologie</option>
+                    </select>
+                </label><br>
+
+                <label>Document réquis:
+                    <input type="file" name="documents[]" multiple required>
+                </label><br>
+                <label>Moyen de paiement :
+                    <select name="paiement" required>
+                        <option value="mpesa">M-pesa</option>
+                        <option value="airtel">Airtel Money</option>
+                        <option value="orange">Orange Money</option>
+                    </select>
+                </label><br>
+
+                <label>Numéro de transaction:
+                    <input type="text" name="transaction" required>
+                </label><br>
+
+                <button type="submit">Soumettre l'inscription</button>
+            </form>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 université Protéstante au Congo</p>
+        </footer>
+    </body>
+</html>
